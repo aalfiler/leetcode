@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
 SELECT
-activity_date as day,
+DATE_FORMAT(activity_date, '%Y-%m-%d') as day,
 COUNT(DISTINCT user_id) as active_users
 FROM Activity
 WHERE datediff('2019-07-27', activity_date) < 30
